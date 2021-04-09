@@ -1,2 +1,2 @@
-# Automated-Cookie-Cutter-Creator
+# Automated cookie cutter creator
 Creates 3D cookie cutter from image.
