@@ -75,6 +75,7 @@ cv2.destroyAllWindows()
 file = open("./output/cutter.obj", "w")
 file.write("o Cutter\n")
 
+height = 0
 
 for i in range(len(colors)):
 
@@ -84,6 +85,9 @@ for i in range(len(colors)):
     unique_coordinates = list(set(list(coordinates)))
 
     for x in range(len(unique_coordinates)):
-        file.write("v {} {} 0\n".format(unique_coordinates[x][0]/10, unique_coordinates[x][1]/10))
+        file.write("v {} {} {}\n".format(unique_coordinates[x][0]/10, unique_coordinates[x][1]/10, height))
+
+    height = height + 5
+
 
 file.close()
