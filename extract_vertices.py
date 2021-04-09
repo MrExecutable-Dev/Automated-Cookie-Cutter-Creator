@@ -43,7 +43,7 @@ def onChange(value):
             colors.append(color)
 
 
-img = cv2.imread('face-2-bg-removed.png')
+img = cv2.imread('./test_data/face-2-bg-removed.png')
 edges = cv2.Canny(img, x, y)
 
 Z = img.reshape((-1, 3))
@@ -72,7 +72,7 @@ cv2.createTrackbar('button slider', "k-means edges", 0, 1, onChange)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-file = open("cutter.obj", "w")
+file = open("./output/cutter.obj", "w")
 file.write("o Cutter\n")
 
 
